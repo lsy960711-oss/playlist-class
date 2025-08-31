@@ -1,13 +1,8 @@
 from datetime import datetime
 from app.model import (
-    AddSongRequest,
     ChartResponse,
-    PlaylistResponse,
-    PlaylistSong,
-    PlaylistSongDetail,
     Song,
     SongDetailResponse,
-    UpdateSongRequest,
 )
 from fastapi import FastAPI, Query, HTTPException
 from contextlib import asynccontextmanager
@@ -19,7 +14,6 @@ import json
 
 # 전역변수
 chart_data: list[Song] = []
-playlist_data: list[PlaylistSong] = []
 
 
 def load_chart_data():
