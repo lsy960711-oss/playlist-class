@@ -63,6 +63,13 @@ app = FastAPI(
 )
 
 
+# "/"이라는 주소로 api요청온 경우
+@app.get("/test")
+def test():
+    # 응답할 데이터
+    return {"message": "테스트 경로 입니다"}
+
+
 # @app.get("/")
 # def test():
 #     """API 상태 확인용 기본 엔드포인트"""
